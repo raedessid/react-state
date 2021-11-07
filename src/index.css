@@ -35,8 +35,25 @@ span {
   color: black;
 }
 img {
-  width: 30%;
+  width: 33%;
   height: 700px;
   display: block;
-  margin-left: 30%;
+  margin-left: 33%;
+  margin-right: 33%;
+
+}
+
+input {
+  width: 40%;
+  height: 70px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px ; 
+  text-align: center;
+  color: aqua;
+  background-color: rgb(188, 255, 252);
+  font-size: 50px;
+  font-weight: 100px
+  ;
 }

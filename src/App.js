@@ -22,7 +22,7 @@ class App extends Component {
     imageSrc : raed, 
     imageAlt :'it\'s my image ' , 
     show : false , 
-    count: 0,
+    counte: 0,
    intervalId: 0
   }; 
    toggleHandler =() => {
@@ -32,21 +32,9 @@ class App extends Component {
     })
   }
   componentDidMount() {
-    const newIntervalId = setInterval(() => {
-      this.setState(prevState => {
-        return {
-          ...prevState,
-          count: prevState.count + 1,
-        };
-      });
-    }, 1000);
-  
-    this.setState(prevState => {
-      return {
-        ...prevState,
-        intervalId: newIntervalId,
-      };
-    });
+console.log("component did mount") 
+let startCount = setInterval(()=> {this.setState({counte : this.state.counte+1});
+if (this.state.counte === 1000 ) {clearInterval(startCount)}},1000)
   }
   componentDidUpdate () {
     console.log("component updated")
@@ -69,7 +57,7 @@ shouldComponentUpdate() {
       <p className="container"><span>profession : </span>   {this.state.profession} </p>
       <p><span>profile photo  :   </span></p>
       <img className="container" src = {this.state.imageSrc} alt = {this.state.imageAlt}/>
-      <p>{this.state.intervalId}</p>
+      <input  placeholder = {this.state.counte} />
 
     
 </div>
